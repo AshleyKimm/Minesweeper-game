@@ -1,0 +1,11 @@
+new
+- returns nullptr if theres not enough memory
+
+        [7][6][5][4][3][2][1][0]
+               |  |  |  |  |  |
+hiddenBit -----+  |  +--+--+--+-- number of adjacent mine in field
+markedBit --------+
+
+initializing array => static array: variable of elements must be constant
+
+g++ -o main minesweeper.cpp minesweeper_lib.cpp -std=c++11
