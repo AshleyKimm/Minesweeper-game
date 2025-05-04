@@ -28,7 +28,7 @@ void printBoard(char *board, std::size_t xdim, std::size_t ydim) {
 }
 void hideBoard(char *board, std::size_t xdim, std::size_t ydim) {
     for (std::size_t i{}; i < (xdim * ydim); ++i) {
-        if ((board[i] & hiddenBit()) != hiddenBit()) board[i] += hiddenBit();
+        board[i] = board[i] | hiddenBit();
     } 
 }
 int mark(char *board, std::size_t xdim, std::size_t ydim, std::size_t xloc, std::size_t yloc) {

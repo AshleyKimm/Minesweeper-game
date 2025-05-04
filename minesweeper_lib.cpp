@@ -15,14 +15,13 @@ int main()
 
 bool game()
 {
-  std::size_t xdim {0};
-  std::size_t ydim {0};
-  unsigned int numMine {0};
+  std::size_t xdim {}, ydim {};
+  unsigned int numMine {};
   char * gameBoard {NULL};
 
   startGame(gameBoard, xdim, ydim, numMine);
 
-  char currAction {0};
+  char currAction {};
   while(currAction != 'Q')
   {
     switch (currAction)
@@ -172,12 +171,12 @@ std::size_t ydim_max()
 
 char markedBit()
 {
-  return 0x10;
+  return 0x10; // 0001 0000
 }
 
 char hiddenBit()
 {
-  return 0x20;
+  return 0x20; // 0010 0000
 }
 
 char valueMask()
